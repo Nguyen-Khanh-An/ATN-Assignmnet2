@@ -29,7 +29,7 @@
         if(isset($_GET["function"])=="del"){
         if(isset($_GET["id"])){
         $id=$_GET["id"];
-        mysqli_query($conn, "delete from category where Cat_ID='$id'");
+        pg_query($conn, "delete from category where cat_id='$id'");
         }
     }
     ?>
@@ -55,16 +55,16 @@
 			<tbody>
             <?php
                 $No=1;
-                $result = mysqli_query($conn,"SELECT * FROM category");
-                while($row=mysqli_fetch_array($result, MYSQLI_ASSOC))
+                $result = pg_query($conn,"SELECT * FROM category");
+                while($row=pg_fetch_array($result, NULL, PGSQL_ASSOC))
                 {
             ?>
 			<tr>
               <td class="cotCheckBox"><?php echo $No;?></td>
-              <td><?php echo $row["Cat_Name"];?></td>
-              <td><?php echo $row["Cat_Des"];?></td>
-              <td style='text-align:center'><a href="?page=update_category&&id=<?php echo $row["Cat_ID"];?>"><img src='images/edit.png' border='0'  /></a></td>
-              <td style='text-align:center'><a href="?page=category_management&&function=del&&id=<?php echo $row["Cat_ID"];?>" onclick="return deleteConfirm()"><img src='images/delete.png' border='0' /></a></td>
+              <td><?php echo $row["cat_name"];?></td>
+              <td><?php echo $row["cat_des"];?></td>
+              <td style='text-align:center'><a href="?page=update_category&&id=<?php echo $row["cat_id"];?>"><img src='images/edit.png' border='0'  /></a></td>
+              <td style='text-align:center'><a href="?page=category_management&&function=del&&id=<?php echo $row["cat_id"];?>" onclick="return deleteConfirm()"><img src='images/delete.png' border='0' /></a></td>
             </tr>
 
             <?php

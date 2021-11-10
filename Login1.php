@@ -1,9 +1,9 @@
 <link rel="stylesheet" type="text/css" href=""/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/responsive.css">
-<script src="js/jquery-3.2.0.min.js"/></script>
-<script src="js/jquery.dataTables.min.js"/></script>
-<script src="js/dataTables.bootstrap.min.js"/></script>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
 
 <?php
     if(isset($_POST['btnLogin']))
@@ -29,10 +29,10 @@
         else{
             include_once("Connection.php");
             $pass = md5($pa);
-            $res = mysqli_query($conn, "SELECT Username, Password, state FROM Customer WHERE Username='$us' AND Password='$pass'")
-            or die(mysqli_error($conn));
-            $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
-            if(mysqli_num_rows($res)==1){
+            $res = pg_query($conn, "SELECT username, password, state FROM customer WHERE username='$us' AND password='$pass'")
+            or die(pg_errormessage($conn));
+            $row = pg_fetch_array($res, NULL, PGSQL_ASSOC);
+            if(pg_num_rows($res)==1){
                 $_SESSION["us"]=$us;
                 $_SESSION["admin"]=$row["state"];
                 echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';

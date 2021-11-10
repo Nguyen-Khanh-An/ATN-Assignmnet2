@@ -33,6 +33,6 @@
 		<![endif]-->
 	</head>
 
-<p>We, LOGIA company was established under the business registration number: 4102013060 by the Department of National Ho Chi Minh City on 8 May 2010.
+<p>We,ATN company was established under the business registration number: 4102013060 by the Department of National Ho Chi Minh City on 8 May 2010.
 
-After more than 10 years of operation and continuous development, the company gradually asserted its position in the Vietnamese market. Currently, LOGIA company is a reputable distributor and manufacturer in the world. We are proud of a team of professional, experienced staff including doctors, engineers, bachelor of economics,ready to be present anytime, anywhere to serve the needs of customers, with style. dedicated and professional. </p>
+After more than 10 years of operation and continuous development, the company gradually asserted its position in the Vietnamese market. Currently, Company company is a reputable distributor and manufacturer in the world. We are proud of a team of professional, experienced staff including doctors, engineers, bachelor of economics,ready to be present anytime, anywhere to serve the needs of customers, with style. dedicated and professional. </p>
