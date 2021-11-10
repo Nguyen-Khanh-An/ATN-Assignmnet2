@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
 <?php
-	include_once("connection.php");
+	include_once("Connection.php");
 	Function bind_Category_List($conn,$selectedValue){
 		$sqlstring="SELECT cat_id, cat_name FROM category";
 		$result = pg_query($conn, $sqlstring);
@@ -137,7 +137,7 @@
 	}
 ?>
 <?php	
-	include_once("connection.php");
+	include_once("Connection.php");
 	if(isset($_POST["btnUpdate"]))
 	{
 		$id=$_POST["txtID"];
