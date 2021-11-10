@@ -34,16 +34,16 @@
     <link href="css/salomon.css" rel="stylesheet">
     
 <!--datatable-->
-	<script src="js/jquery-3.2.0.min.js"/></script>
-    <script src="js/jquery.dataTables.min.js"/></script>
-    <script src="js/dataTables.bootstrap.min.js"/></script>
+	<script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
     
   </head>
   <body>
   
   <?php
   session_start();
-    include_once("connection.php"); 
+    include_once("Connection.php"); 
   ?>
 
 <header id="header"><!--header-->
@@ -56,7 +56,7 @@
 						<div class="logo pull-left" >
                             <a href="index.php" style="background-color:#ff6699;color:#">
                             <img src="images/logo1234.jpg" width="125" height="125"></a>
-                            <a href="index.php" style="background-color:#;color:#FFF">LOGIA 
+                            <a href="index.php" style="background-color:#;color:#FFF">ATN
 						</div>
 					</div>
 					<div class="col-sm-6">
@@ -177,7 +177,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>LOGI<span>A</span></h2>
+                        <h2>AT<span>N</span></h2>
                         <p>Contact </p>
                         >>>Nguyen Khanh An<br/>
                         Email : khanhan@gmail.com <br/>
@@ -201,8 +201,8 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">About us</h2>
                         <ul>
-                            <p>We, LOGIA company was established under the business registration number: 4102013060 by the Department of National Ho Chi Minh City on 8 May 2010.</p>
-                            <p>After more than 10 years of operation and continuous development, the company gradually asserted its position in the Vietnamese market. Currently, LOGIA company is a reputable distributor and manufacturer in the world. We are proud of a team of professional, experienced staff including doctors, engineers, bachelor of economics,ready to be present anytime, anywhere to serve the needs of customers, with style. dedicated and professional. </p>
+                            <p>We, ATN company was established under the business registration number: 4102013060 by the Department of National Ho Chi Minh City on 8 May 2010.</p>
+                            <p>After more than 10 years of operation and continuous development, the company gradually asserted its position in the Vietnamese market. Currently, CompanyCPCP company is a reputable distributor and manufacturer in the world. We are proud of a team of professional, experienced staff including doctors, engineers, bachelor of economics,ready to be present anytime, anywhere to serve the needs of customers, with style. dedicated and professional. </p>
                         </ul>                        
                     </div>
                 </div>
@@ -228,7 +228,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2021 LOGIA  </p>
+                        <p>&copy; 2021   </p>
                     </div>
                 </div>
                 
