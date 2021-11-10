@@ -49,29 +49,29 @@ include_once("connection.php");
                         <!--Load san pham tu DB -->
                            <?php
 						  // 	include_once("database.php");
-		  				   	$result = mysqli_query($conn, "SELECT * FROM product" );
+		  				   	$result = pg_query($conn, "SELECT * FROM product" );
 			
 			                if (!$result) { //add this check.
-                                die('Invalid query: ' . mysqli_error($conn));
+                                die('Invalid query: ' . pg_error($conn));
                             }
 		
 			            
-			                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+			                while($row = pg_fetch_array($result, pg_ASSOC)){
 				            ?>
 				            <!--Một sản phẩm -->
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="product-imgs/<?php echo $row['Pro_image']?>" width="150" height="150">
+                                    <img src="product-imgs/<?php echo $row['pro_image']?>" width="150" height="150">
                                     <div class="product-hover">
                                         <a href="?page=Detail" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> See More</a></a>
                                         
                                     </div>
                                 </div>
                                 
-                                <h2><a href="?page=quanly_chitietsanpham&ma=<?php echo  $row['Product_ID']?>"><?php echo  $row['Product_Name']?></a></h2>
+                                <h2><a href="?page=quanly_chitietsanpham&ma=<?php echo  $row['product_id']?>"><?php echo  $row['product_name']?></a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins><?php echo  $row['Price']?></ins> <del><?php echo  $row['oldPrice']?></del>
+                                    <ins><?php echo  $row['price']?></ins> <del><?php echo  $row['oldprice']?></del>
                                 </div> 
                             </div>
                 
