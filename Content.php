@@ -52,7 +52,7 @@ include_once("connection.php");
 		  				   	$result = pg_query($conn, "SELECT * FROM product" );
 			
 			                if (!$result) { //add this check.
-                                die('Invalid query: ' . pg_error($conn));
+                                die('Invalid query: ' . pg_errormessage($conn));
                             }
 		
 			            
