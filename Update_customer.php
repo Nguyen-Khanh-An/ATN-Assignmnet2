@@ -1,15 +1,15 @@
 <?php
 //Get custmer information
-$query = "SELECT CustName, Address, email, telephone
+$query = "SELECT custname, address, email, telephone
 			from customer
-			where Username='" . $_SESSION["us"] ."'";
-	$result =mysqli_query($conn, $query) or die (mysqli_error($conn));
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+			where username='" . $_SESSION["us"] ."'";
+	$result =pg_query($conn, $query) or die (pg_errormessage($conn));
+	$row = pg_fetch_array($result, NULL, PGSQL_ASSOC);
 
 	$us = $_SESSION["us"];
 	$email =$row["email"];
-	$fullname=$row["CustName"];
-	$address= $row["Address"];
+	$fullname=$row["custname"];
+	$address= $row["address"];
 	$telephone =$row["telephone"];
 
 
@@ -26,16 +26,16 @@ if(isset($_POST['btnUpdate'])){
 		if($_POST['txtPass1']!=""){
 			$pass = md5($_POST['txtPass1']);
 
-			$sq = "Update customer set CustName='$fullname', Address = '$address',
-			telephone='$telephone', Password='$pass' where Username='".$_SESSION['us']. "'";
+			$sq = "Update customer set custname='$fullname', address = '$address',
+			telephone='$telephone', password='$pass' where username='".$_SESSION['us']. "'";
 
-			mysqli_query($conn, $sq) or die(mysqli_error($conn));
+			pg_query($conn, $sq) or die(pg_errormessage($conn));
 		}
 		else{
-			$sq = "Update customer set CustName='$fullname', Address = '$address',
-			telephone='$telephone', Password='$pass' where Username='".$_SESSION['us']. "'";
+			$sq = "Update customer set custname='$fullname', address = '$address',
+			telephone='$telephone', password='$pass' where username='".$_SESSION['us']. "'";
 
-			mysqli_query($conn, $sq) or die(mysqli_error($conn));
+			pg_query($conn, $sq) or die(pg_errormessage($conn));
 		}
 		echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
 	}
