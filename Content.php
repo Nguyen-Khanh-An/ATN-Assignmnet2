@@ -105,7 +105,7 @@ include_once("Connection.php");
 												<li class="span3">
 													<div class="product-box">
 														<span class="sale_tag"></span>
-														<p><a href="?page=Detail"><img src="themes/images/anh1.png" alt="" /></a></p>
+														<p><a href="?page=Detail"><img src="themes/images/cloth/anh1.png" alt="" /></a></p>
 														<a href="?page=Detail" class="title">Asus K45A-VX229 (K45A-3CVX)</a><br/>
 														<a href="?page=Detail" class="category"><p class="price">11.000.000đ</p></a>
 															
@@ -238,7 +238,13 @@ include_once("Connection.php");
 														<p class="price">16.500.000đ</p>
 													</div>
 												</li>
-																																										
+												<li class="span3">
+													<div class="product-box">
+														<p><a href="?page=Detail"><img src="themes/images/cloth/anh11.png" alt="" /></a></p>
+														<a href="?page=Detail" class="title">You think water</a><br/>													
+														<p class="price">16.500.000đ</p>
+													</div>
+												</li>																														
 											</ul>
 										</div>
 		
